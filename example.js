@@ -3,8 +3,7 @@
 const fs = require('fs');
 var request = require('request');
 
-function Removebg(beforePath, afterpath) {
-    let path = afterpath;
+function Removebg(beforePath) {
     let fileSu = beforePath;
     const VhtearKey = "APIKEYMU";//CHAT wa.me/6281238552767
     let formData = {
@@ -28,11 +27,12 @@ function Removebg(beforePath, afterpath) {
             console.log("Upload success horay!!!");
             const user = JSON.parse(body)
             return user
+            //responseJson
         }
     });
 }
 
-Removebg('origin.jpg','result.png')
+Removebg('origin.jpg')
 
 //Response json
 `{
