@@ -152,8 +152,7 @@ class VHtearDriver:
                     dataNE = {
                             'status': 200,
                             'img': original_url,
-                            'url_ori': download_link,
-                            'url': "https://crot.sosmedboost.com/media/local_storage_v2/mp4/"+ce+".mp4",
+                            'url_ori': download_link
                           }
                     self.driver = webdriver.Chrome(service=self.service, options=self.options)
                     download_video(download_link)
@@ -172,3 +171,4 @@ class VHtearDriver:
 VHdriver = VHtearDriver()
 sw = VHdriver.youtubeDownload("https://youtu.be/rdD-dKr-L-I?si=PT-oBsfEWa5ecZvv")
 print(sw)
+
